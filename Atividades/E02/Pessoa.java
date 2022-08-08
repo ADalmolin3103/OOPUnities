@@ -1,3 +1,5 @@
+package E02;
+
 public class Pessoa
 {
     String nome, dataNascimento, estadoCivil = "Solteiro";

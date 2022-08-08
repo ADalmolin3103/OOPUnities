@@ -1,3 +1,5 @@
+package E02;
+
 public class E02 {
     public E02()
     {
