@@ -2,8 +2,8 @@ package E02;
 
 public class Pessoa
 {
-    String nome, dataNascimento, estadoCivil = "Solteiro";
-    char gen;
+    private String nome, dataNascimento, estadoCivil = "Solteiro";
+    private char gen;
 
     public void mudarNome(String nomeNovo)
     {
@@ -22,6 +22,6 @@ public class Pessoa
 
     public void mudarDataNascimento(String Nascimento)
     {
-        dataNascimento = dataNascimento;
+        dataNascimento = Nascimento;
     }
 }
