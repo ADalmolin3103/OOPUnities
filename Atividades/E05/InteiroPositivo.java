@@ -3,21 +3,21 @@ package E05;
 public class InteiroPositivo {
     private int x, xFatorial, xDivisores, fibonacci; // mover para os métodos
 
-    public void setNumero(int num) {
+    public void setNumero(int num) {//OK
         if (num >= 0) {
             this.x = num;
         }
     }
 
-    public int pegarValor() {
+    public int pegarValor() { //OK
         return this.x;
     }
 
-    public int multiplicador(InteiroPositivo outro) {
+    public int multiplicador(InteiroPositivo outro) {  //OK
         return this.x *= outro.pegarValor();
     }
 
-    public int fatorial() {
+    public int fatorial() { //OK
         int indiceSubtracao = this.x;
         xFatorial = indiceSubtracao;
         while (indiceSubtracao > 1) {
@@ -27,9 +27,9 @@ public class InteiroPositivo {
         return xFatorial;
     }
 
-    public int numeroDivisores() {
+    public int numeroDivisores() { //OK
         xDivisores = 0;
-        for (int i = 0; i < x; i++) {
+        for (int i = 1; i < x+1; i++) {
             if (x % i == 0) {
                 xDivisores++;
             }
@@ -37,14 +37,16 @@ public class InteiroPositivo {
         return xDivisores;
     }
 
-    public int fibonacci(InteiroPositivo X) {
-        int tamanhoSequencia = X.pegarValor();
+    public int fibonacci() { 
+        int tamanhoSequencia = this.pegarValor();
         int[] fibSeq = new int[tamanhoSequencia];
         for (int i = 0; i < fibSeq.length; i++) {
             if(i<2){
                 fibSeq[i]=1;
             }
-            fibSeq[i]=fibSeq[i-1]+fibSeq[i-2];
+            if(i>=2){
+                fibSeq[i]=fibSeq[i-1]+fibSeq[i-2];
+            }
         }
         return fibonacci;
     }
